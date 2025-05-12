@@ -1,0 +1,1 @@
+kali                 UID: 1000  GID: 1000  Home: /home/kali                Shell: /usr/bin/zsh

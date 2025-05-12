@@ -1,0 +1,4 @@
+kali       UID: 1000 GID: 1000 Home: /home/kali      Shell: /usr/bin/zsh
+newuser    UID: 1001 GID: 1001 Home: /home/newuser   Shell: /bin/sh
+jhonDoe    UID: 1002 GID: 1002 Home: /home/jhonDoe   Shell: /bin/sh
+janeDoe    UID: 1003 GID: 1003 Home: /home/janeDoe   Shell: /bin/sh

@@ -1,0 +1,4 @@
+Add
+Remove
+Modify
+Lock/Unlock

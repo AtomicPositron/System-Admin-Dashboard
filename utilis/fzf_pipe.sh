@@ -18,5 +18,5 @@ fzf_pipe() {
         --separator="─" \
         --scrollbar="│" \
         --info="right" \
-        --preview="cat $2"
+        --preview="glow --style=dark $2"
 }

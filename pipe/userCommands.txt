@@ -1,0 +1,21 @@
+********************************
+|                              |
+|           CHEATSHEET         |
+|                              |
+********************************
+
+Refresh - r
+
+Add - add [username]
+
+Delete - del [username]
+
+Modify -- mdf [flag] [username]
+       |
+       |- -p  Modify Passwords
+       |
+       |- -f  Force Users to change their Password at next login
+       |
+       |- -l  Lock/unlock Accounts
+
+
