@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 source ./utilis/router.sh
 gum spin --spinner dot --title "initialsing neofetch.." -- sleep 1
 gum spin --spinner dot --title "initialsing duf.." -- sleep 1
