@@ -1,1 +1,2 @@
 kali       UID: 1000 GID: 1000 Home: /home/kali      Shell: /usr/bin/zsh
+dd         UID: 1003 GID: 1003 Home: /home/dd        Shell: /bin/sh

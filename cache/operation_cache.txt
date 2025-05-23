@@ -1,6 +1,4 @@
-Create
-Delete
-Remove_user
-Add_user
-Rename
-Change_Id
+Lock
+Unlock
+Lock_Status
+Back

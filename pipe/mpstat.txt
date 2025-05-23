@@ -1,0 +1,4 @@
+Linux 6.12.25-amd64 (kali) 	05/21/2025 	_x86_64_	(4 CPU)
+
+02:26:31 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+02:26:31 PM  all    1.67    0.00    3.02    0.08    0.00    0.21    0.00    0.00    0.00   95.01

@@ -13,7 +13,9 @@ update_screen() {
     duf >./pipe/duf.txt
     uptime >./pipe/uptime.txt
     free >./pipe/free.txt
+
     clear
+
     neofetch_window=$(gum style --border normal --margin "0 0" --padding "0 1" --width 70 <./pipe/neofetch.txt)
     free_window=$(gum style --border normal --margin "0 0" --padding "0 1" --width 70 <./pipe/free.txt)
     duf_window=$(gum style --border normal --margin "0 0" --padding "0 1" --width 90 <./pipe/duf.txt)
