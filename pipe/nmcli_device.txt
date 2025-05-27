@@ -4,7 +4,7 @@ GENERAL.HWADDR:                         00:0C:29:DB:69:96
 GENERAL.MTU:                            1500
 GENERAL.STATE:                          100 (connected)
 GENERAL.CONNECTION:                     Wired connection 1
-GENERAL.CON-PATH:                       /org/freedesktop/NetworkManager/ActiveConnection/5
+GENERAL.CON-PATH:                       /org/freedesktop/NetworkManager/ActiveConnection/18
 WIRED-PROPERTIES.CARRIER:               on
 IP4.ADDRESS[1]:                         192.168.189.128/24
 IP4.GATEWAY:                            192.168.189.2

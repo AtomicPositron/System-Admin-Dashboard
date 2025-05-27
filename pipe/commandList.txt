@@ -1,5 +1,6 @@
-Add
-Remove
-Modify
-Lock_Unlock
-Menu
+Filter/Search
+Kill
+Enable/Disable
+More_Information
+Dependencies
+Back

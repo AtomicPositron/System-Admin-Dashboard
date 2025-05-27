@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 clear
 
@@ -61,7 +61,7 @@ create_group() {
             if [ "$groupName" != "" ]; then
                 groupadd "$groupName"
             else
-                gum log --structured --level error "Group name not given" name ./log/log.txt
+                gum log --structured --level error "Group name not given" name ./log/admin.log
             fi
             clear
             bash ./modules/User_managment.sh
@@ -69,7 +69,7 @@ create_group() {
             if [ "$groupName" != "" ]; then
                 groupadd -g "$gid" "$groupName"
             else
-                gum log --structured --level error "Group name not given" name ./log/log.txt
+                gum log --structured --level error "Group name not given" name ./log/admin.log
             fi
         fi
     else
@@ -212,11 +212,11 @@ lock_unlock() {
         lock_status_user
         ;;
     "")
-        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/log.txt
+        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/admin.log
         bash ./module/User_managment.sh
         ;;
     *)
-        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/log.txt
+        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/admin.log
         bash ./module/User_managment.sh
         ;;
 
@@ -240,11 +240,11 @@ modify_user() {
         modify_password
         ;;
     "")
-        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/log.txt
+        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/admin.log
         bash ./module/User_managment.sh
         ;;
     *)
-        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/log.txt
+        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/admin.log
         bash ./module/User_managment.sh
         ;;
     esac
@@ -281,7 +281,7 @@ command_list() {
         bash ./main.sh
         ;;
     *)
-        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/log.txt
+        gum log --structured --level error "Nothing Selected Or Function Not assigned to option" name ./log/admin.log
         bash ./module/User_managment.sh
         ;;
     esac

@@ -1,0 +1,5 @@
+Linux 6.12.25-amd64 (kali) 	05/27/2025 	_x86_64_	(4 CPU)
+
+07:06:29 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s   %ifutil
+07:06:29 PM        lo      0.06      0.06      0.00      0.00      0.00      0.00      0.00      0.00
+07:06:29 PM      eth0      2.28      1.55      0.97      0.25      0.00      0.00      0.00      0.00

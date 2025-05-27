@@ -1,27 +1,39 @@
-case $data in
-        1)
-            systemctl list-units --type=service
-            echo "$(date): Listed all services" >> "$LOG_FILE"
-            ;;
-        2)
-            read -p "Enter service name to start: " s
-            sudo systemctl start "$s"
-            echo "$(date): Started service $s" >> "$LOG_FILE"
-            ;;
-        3)
-            read -p "Enter service name to stop: " s
-            sudo systemctl stop "$s"
-            echo "$(date): Stopped service $s" >> "$LOG_FILE"
-            ;;
-        4)
-            read -p "Enter service name to restart: " s
-            sudo systemctl restart "$s"
-            echo "$(date): Restarted service $s" >> "$LOG_FILE"
-            ;;
-        *)
-            echo "Invalid Option"
-            ;;
+#!/bin/bash
+
+source ./utilis/input.sh
+
+process_list() {
+    rm ./pipe/commandList.txt
+
+    echo Start_Services >.pipe/commandList.txt
+    echo Stop_Services >.pipe/commandList.txt
+    echo Restart_Services >.pipe/commandList.txt
+    echo Back >.pipe/commandList.txt
+
+    data=$(option ./pipe/commandList.txt)
+
+    case $data in
+    Start_Services)
+        s=$(input "Enter service name to start")
+        sudo systemctl start "$s"
+        ;;
+    Stop_Services)
+        s=$(input "Enter service name to stop")
+        sudo systemctl stop "$s"
+        ;;
+    Restart_Services)
+        s=$(input "Enter service name to restart")
+        sudo systemctl restart "$s"
+        ;;
+    Back)
+        bash ./main.sh
+        ;;
+
+    *)
+        gum log --structured --level error "Field Was not picked" name ./log/admin.log
+
+        bash ./main.sh
+        ;;
     esac
 
-    read -p "Press Enter to return to menu..."
 }

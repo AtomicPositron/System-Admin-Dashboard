@@ -1,9 +1,9 @@
 1: lo: group afstats subgroup mpls
 1: lo: group link
     RX:  bytes packets errors dropped  missed   mcast           
-         13440     168      0       0       0       0 
+        142701    1882      0       0       0       0 
     TX:  bytes packets errors dropped carrier collsns           
-         13440     168      0       0       0       0 
+        142701    1882      0       0       0       0 
 1: lo: group offload subgroup l3_stats off used off
 1: lo: group offload subgroup hw_stats_info
     l3_stats off used off
@@ -19,9 +19,9 @@
 2: eth0: group afstats subgroup mpls
 2: eth0: group link
     RX:  bytes packets errors dropped  missed   mcast           
-       8749222    9397      0       0       0       0 
+      31592859   72172      0       0       0       0 
     TX:  bytes packets errors dropped carrier collsns           
-        722928    5937      0      18       0       0 
+       8154204   49084      0     119       0       0 
 2: eth0: group offload subgroup l3_stats off used off
 2: eth0: group offload subgroup hw_stats_info
     l3_stats off used off

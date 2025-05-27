@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./utilis/fzf_pipe.sh
-moduleList=('Network_Information' 'System_Information' 'Software_Update' 'Process_Managment' 'User_Managment')
+moduleList=('Service_managment' 'Backup_Utility' 'Network_Information' 'System_Information' 'Software_Update' 'Process_Managment' 'User_Managment')
 IFS=$'\n'
 string="${moduleList[*]}"
 
@@ -22,6 +22,12 @@ Process_Managment)
     ;;
 Network_Information)
     bash ./modules/Network_information.sh
+    ;;
+Backup_Utility)
+    bash ./modules/Backup_utility.sh
+    ;;
+Service_managment)
+    bash ./modules/Service_managment.sh
     ;;
 *)
     clear
