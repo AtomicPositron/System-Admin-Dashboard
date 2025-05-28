@@ -6,43 +6,61 @@ clear
 
 backup_files() {
     directory=$(input "Directory name")
-    name=$(input "Name of backup folder")
-    tar -czf "$name.tar.gz" "$directory"
+    if [ ! -d "$directory" ]; then
+        gum log --structured --level error "Directory does not exist: $directory" name ./log/admin.log
+        return 1
+    fi
 
-    gum log --structured --level error "Backed up files" name ./log/admin.log
+    name=$(input "Name of backup folder")
+    if tar -czf "$name.tar.gz" "$directory"; then
+        gum log --structured --level success "Successfully backed up $directory to $name.tar.gz" name ./log/admin.log
+    else
+        gum log --structured --level error "Failed to create backup" name ./log/admin.log
+        return 1
+    fi
 }
 
 restore_file() {
     past_file=$(input "Backup file to restore (with .tar.gz)")
-    directory=$(input "restore directory")
+    if [ ! -f "$past_file" ]; then
+        gum log --structured --level error "Backup file not found: $past_file" name ./log/admin.log
+        return 1
+    fi
 
+    directory=$(input "Restore directory")
     mkdir -p "$directory"
-    tar -xzf "$past_file" -C "file"
-    gum log --structured --level error "Restore file" name ./log/admin.log
+    
+    if tar -xzf "$past_file" -C "$directory"; then
+        gum log --structured --level success "Successfully restored $past_file to $directory" name ./log/admin.log
+    else
+        gum log --structured --level error "Failed to restore backup" name ./log/admin.log
+        return 1
+    fi
 }
 
 menu() {
-    rm ./cache/operation_cache.txt
+    rm -f ./cache/operation_cache.txt
 
-    echo 'Backup' >>./cache/operation_cache.txt
-    echo 'Restore' >>./cache/operation_cache.txt
-    echo 'Back' >>./cache/operation_cache.txt
+    echo 'Backup' >> ./cache/operation_cache.txt
+    echo 'Restore' >> ./cache/operation_cache.txt
+    echo 'Back' >> ./cache/operation_cache.txt
 
     data=$(option ./cache/operation_cache.txt)
 
     case "$data" in
-    Backup)
-        backup_files
-        ;;
-    Restore)
-        restore_files
-        ;;
-    Back)
-        bash ./main.sh
-        ;;
-    *)
-        bash ./main.sh
-        ;;
+        Backup)
+            backup_files
+            ;;
+        Restore)
+            restore_file
+            ;;
+        Back)
+            bash ./main.sh
+            ;;
+        *)
+            bash ./main.sh
+            ;;
     esac
 }
+
 menu
