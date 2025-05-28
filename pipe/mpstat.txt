@@ -1,4 +1,4 @@
-Linux 6.12.25-amd64 (kali) 	05/27/2025 	_x86_64_	(4 CPU)
+Linux 6.12.25-amd64 (kali) 	05/28/2025 	_x86_64_	(4 CPU)
 
-07:29:15 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
-07:29:15 PM  all    3.63    0.00    4.45    0.37    0.00    0.33    0.00    0.00    0.00   91.22
+04:04:02 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+04:04:02 PM  all    7.04    0.00    7.38    0.41    0.00    0.37    0.00    0.00    0.00   84.79

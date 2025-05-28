@@ -1,6 +1,5 @@
 Filter/Search
 Kill
 Enable/Disable
-More_Information
 Dependencies
 Back

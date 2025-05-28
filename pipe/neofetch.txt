@@ -24,8 +24,8 @@
 [51C[0m[1mOS[0m[0m:[0m Kali GNU/Linux Rolling x86_64[0m 
 [51C[0m[1mHost[0m[0m:[0m Intel Corporation 440BX Desktop Reference Platform[0m 
 [51C[0m[1mKernel[0m[0m:[0m 6.12.25-amd64[0m 
-[51C[0m[1mUptime[0m[0m:[0m 6 hours, 13 mins[0m 
-[51C[0m[1mPackages[0m[0m:[0m 3288 (dpkg)[0m 
+[51C[0m[1mUptime[0m[0m:[0m 3 hours, 11 mins[0m 
+[51C[0m[1mPackages[0m[0m:[0m 3318 (dpkg)[0m 
 [51C[0m[1mShell[0m[0m:[0m zsh 5.9[0m 
 [51C[0m[1mResolution[0m[0m:[0m 1366x768[0m 
 [51C[0m[1mDE[0m[0m:[0m Xfce 4.20[0m 
@@ -35,7 +35,7 @@
 [51C[0m[1mTerminal[0m[0m:[0m qterminal[0m 
 [51C[0m[1mCPU[0m[0m:[0m Intel Pentium Silver N5030 (4) @ 1.094GHz[0m 
 [51C[0m[1mGPU[0m[0m:[0m VMware SVGA II Adapter[0m 
-[51C[0m[1mMemory[0m[0m:[0m 2024MiB / 2799MiB[0m 
+[51C[0m[1mMemory[0m[0m:[0m 1842MiB / 2799MiB[0m 
 
 [51C[30m[40m   [31m[41m   [32m[42m   [33m[43m   [34m[44m   [35m[45m   [36m[46m   [37m[47m   [m
 [51C[38;5;8m[48;5;8m   [38;5;9m[48;5;9m   [38;5;10m[48;5;10m   [38;5;11m[48;5;11m   [38;5;12m[48;5;12m   [38;5;13m[48;5;13m   [38;5;14m[48;5;14m   [38;5;15m[48;5;15m   [m
