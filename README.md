@@ -32,7 +32,6 @@ A comprehensive suite of Bash scripts for Linux system administration with a use
 git clone https://github.com/yourusername/system-admin-toolkit.git
 cd system-admin-toolkit
 chmod +x *.sh
-sudo mkdir -p ./{pipe,cache,log}
 ```
 
 ## Usage
