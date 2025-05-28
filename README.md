@@ -1,111 +1,108 @@
-# 🖥️ System Admin Dashboard
+# System Administration Toolkit
 
-A lightweight, terminal-based system administration dashboard for Linux systems. Built with shell scripts and powered by tools like `fzf`, `neofetch`, and `duf`, this project provides an intuitive, menu-driven interface for monitoring your system and managing users—all from the terminal.
+![Bash](https://img.shields.io/badge/Shell-Bash-green)
+![Gum](https://img.shields.io/badge/TUI-Gum-blue)
+![License](https://img.shields.io/badge/License-MIT-orange)
 
----
+A comprehensive suite of Bash scripts for Linux system administration with a user-friendly terminal interface.
 
-## 🚀 Features
+## Features
 
-- 🔧 **Modular Dashboard Interface** — Navigate options with `fzf` and execute system utilities effortlessly.
-- 👤 **User Management** — Add, remove, and view system users using the custom `gomu` module.
-- 📊 **System Info Summary** — Display system stats like CPU usage, memory, disk info, and more using `neofetch`, `duf`, and `free`.
-- 📁 **Modular Architecture** — Easy to extend with your own tools and scripts.
+- **User Management**: Create, modify, and delete users/groups
+- **Process Control**: Monitor and manage running processes
+- **Service Management**: Start/stop/restart system services
+- **Backup Utility**: Create and restore compressed backups
+- **System Monitoring**: Real-time system resource monitoring
+- **Network Tools**: Network configuration and diagnostics
+- **Update Manager**: System package updates and repository management
 
----
+## Requirements
 
-## 📂 Project Structure
+- Linux-based OS
+- Bash 4.0+
+- Core utilities: `tar`, `awk`, `ps`, `systemctl`
+- Recommended tools:
+  - `gum` (for TUI)
+  - `fzf` (for fuzzy finding)
+  - `neofetch`, `duf` (for system info)
 
-```bash
-System-Admin-Dashboard/
-├── admin_dashboard.sh      # Launches the dashboard with elevated permissions
-├── main.sh                 # Core menu logic using fzf
-├── install.sh              # Setup script to prepare your environment
-├── version.json            # Versioning info
-├── modules/                # Dashboard feature modules (e.g. user management)
-├── lib/                    # Reusable helper functions
-├── neofetch/               # Neofetch configurations
-├── utilis/                 # Utility scripts and components
-└── human_users.txt         # List or log of system users
-````
-
----
-
-## 🛠️ Requirements
-
-Make sure the following tools are installed:
-
-* `bash` (v4+)
-* [`fzf`](https://github.com/junegunn/fzf)
-* [`neofetch`](https://github.com/dylanaraps/neofetch)
-* [`duf`](https://github.com/muesli/duf)
-* `sudo`
-
-To install on Ubuntu/Debian:
+## Installation
 
 ```bash
-sudo apt update
-sudo apt install fzf neofetch
+git clone https://github.com/yourusername/system-admin-toolkit.git
+cd system-admin-toolkit
+chmod +x *.sh
+sudo mkdir -p ./{pipe,cache,log}
 ```
 
-Install `duf` from [GitHub Releases](https://github.com/muesli/duf/releases) or your package manager.
+## Usage
 
----
-
-## 📥 Installation
-
+Run the main menu:
 ```bash
-git clone https://github.com/AtomicPositron/System-Admin-Dashboard.git
-cd System-Admin-Dashboard
-chmod +x install.sh
-./install.sh
-```
-
----
-
-## 🧑‍💻 Usage
-
-Launch the dashboard with admin privileges:
-
-```bash
-chmod +x admin_dashboard.sh
-./admin_dashboard.sh
-```
-
-Or directly use:
-
-```bash
-chmod +x main.sh
 ./main.sh
 ```
 
----
+### Script Overview
 
-## 🔌 Extending the Dashboard
+| Script | Description |
+|--------|-------------|
+| `Backup_utility.sh` | Create/restore compressed backups |
+| `Process_managment.sh` | Process monitoring and control |
+| `Service_managment.sh` | Service lifecycle management |
+| `User_managment.sh` | User/group administration |
+| `System_information.sh` | Real-time system monitoring |
+| `Network_information.sh` | Network configuration tools |
+| `System_Update.sh` | Package management |
 
-Add new modules to the `modules/` directory. Each module should be a bash script with a standard function interface so it integrates seamlessly with the dashboard menu system.
+## Examples
 
----
-
-## 📜 License
-
-MIT License — feel free to modify and redistribute.
-
----
-
-## ✍️ Author
-
-**Marshall (AtomicPositron)**
-GitHub: [github.com/AtomicPositron](https://github.com/AtomicPositron)
-
----
-
-## ⭐️ Contributions
-
-Feedback, issues, and pull requests are welcome!
-
+1. Create a backup:
+```bash
+./Backup_utility.sh
+> Select "Backup"
+> Enter directory path
+> Name your backup
 ```
 
+2. Monitor processes:
+```bash
+./Process_managment.sh
+> View running processes
+> Filter with fuzzy search
+> Kill processes (with confirmation)
+```
+
+## Best Practices
+
+1. **Backups**: Always test backup restoration
+2. **Sudo**: Use regular user with sudo privileges
+3. **Logging**: Check `./log/admin.log` for operations history
+
+## Safety Features
+
+- Confirmation prompts for destructive operations
+- Input validation for critical commands
+- Error logging for troubleshooting
+- Password verification for user creation
+
+## Roadmap
+
+- [ ] Add plugin system for custom scripts
+- [ ] Implement automated testing
+- [ ] Add remote administration capabilities
+- [ ] Develop web-based dashboard
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+Pull requests welcome! Please:
+1. Maintain consistent style
+2. Add error handling
+3. Include documentation
+4. Test changes thoroughly
+
 ---
 
-Let me know if you'd like me to format and push this to your repo or if you want specific icons or badges included.
-```
