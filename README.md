@@ -1,44 +1,111 @@
+# 🖥️ System Admin Dashboard
 
-# System Admin Dashboard
+A lightweight, terminal-based system administration dashboard for Linux systems. Built with shell scripts and powered by tools like `fzf`, `neofetch`, and `duf`, this project provides an intuitive, menu-driven interface for monitoring your system and managing users—all from the terminal.
 
- Overview
+---
 
-The System Admin Dashboard is a comprehensive solution for system administrators to monitor and manage various aspects of their infrastructure. It provides real-time insights, user management, and system analytics in an intuitive interface.
+## 🚀 Features
 
-# Objectives
+- 🔧 **Modular Dashboard Interface** — Navigate options with `fzf` and execute system utilities effortlessly.
+- 👤 **User Management** — Add, remove, and view system users using the custom `gomu` module.
+- 📊 **System Info Summary** — Display system stats like CPU usage, memory, disk info, and more using `neofetch`, `duf`, and `free`.
+- 📁 **Modular Architecture** — Easy to extend with your own tools and scripts.
 
-- **Centralized Monitoring**: Aggregate system metrics and logs in one place.
-- **User Management**: Administer user roles and permissions efficiently.
-- **Real-time Analytics**: Visualize system performance and health metrics.
-- **Scalability**: Designed to handle growing data and user base.
+---
 
-# Target Audience
+## 📂 Project Structure
 
-- System Administrators
-- IT Operations Teams
-- DevOps Engineers
-- Technical Support Teams
+```bash
+System-Admin-Dashboard/
+├── admin_dashboard.sh      # Launches the dashboard with elevated permissions
+├── main.sh                 # Core menu logic using fzf
+├── install.sh              # Setup script to prepare your environment
+├── version.json            # Versioning info
+├── modules/                # Dashboard feature modules (e.g. user management)
+├── lib/                    # Reusable helper functions
+├── neofetch/               # Neofetch configurations
+├── utilis/                 # Utility scripts and components
+└── human_users.txt         # List or log of system users
+````
 
-# Use Cases
+---
 
-- Monitoring server health and performance.
-- Managing user access and roles.
-- Generating reports on system usage and performance.
-- Troubleshooting system issues with real-time data.
+## 🛠️ Requirements
 
-# Future Enhancements
+Make sure the following tools are installed:
 
-- Integration with cloud platforms (AWS, Azure, GCP).
-- Support for multi-tenancy.
-- Advanced alerting and notification system.
-- Mobile application for on-the-go monitoring.
+* `bash` (v4+)
+* [`fzf`](https://github.com/junegunn/fzf)
+* [`neofetch`](https://github.com/dylanaraps/neofetch)
+* [`duf`](https://github.com/muesli/duf)
+* `sudo`
 
-# Contact
+To install on Ubuntu/Debian:
 
-For support or inquiries, please contact [support@atomicpositron.com](mailto:support@atomicpositron.com).
+```bash
+sudo apt update
+sudo apt install fzf neofetch
+```
 
-# License
+Install `duf` from [GitHub Releases](https://github.com/muesli/duf/releases) or your package manager.
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/AtomicPositron/System-Admin-Dashboard/blob/main/LICENSE) file for details.
+---
 
+## 📥 Installation
 
+```bash
+git clone https://github.com/AtomicPositron/System-Admin-Dashboard.git
+cd System-Admin-Dashboard
+chmod +x install.sh
+./install.sh
+```
+
+---
+
+## 🧑‍💻 Usage
+
+Launch the dashboard with admin privileges:
+
+```bash
+chmod +x admin_dashboard.sh
+./admin_dashboard.sh
+```
+
+Or directly use:
+
+```bash
+chmod +x main.sh
+./main.sh
+```
+
+---
+
+## 🔌 Extending the Dashboard
+
+Add new modules to the `modules/` directory. Each module should be a bash script with a standard function interface so it integrates seamlessly with the dashboard menu system.
+
+---
+
+## 📜 License
+
+MIT License — feel free to modify and redistribute.
+
+---
+
+## ✍️ Author
+
+**Marshall (AtomicPositron)**
+GitHub: [github.com/AtomicPositron](https://github.com/AtomicPositron)
+
+---
+
+## ⭐️ Contributions
+
+Feedback, issues, and pull requests are welcome!
+
+```
+
+---
+
+Let me know if you'd like me to format and push this to your repo or if you want specific icons or badges included.
+```
